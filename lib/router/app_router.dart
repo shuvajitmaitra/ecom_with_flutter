@@ -26,58 +26,50 @@ final appRouter = GoRouter(
         GoRoute(
           path: RoutesName.home,
           builder: (context, state) => const HomeScreen(),
-          routes: [
-            GoRoute(
-              path: 'details',
-              builder: (context, state) => const HomeDetailsScreen(),
-            ),
-            GoRoute(
-              path: 'offers',
-              builder: (context, state) => const HomeOffersScreen(),
-            ),
-          ],
+        ),
+        GoRoute(
+          path: RoutesName.homeDetails,
+          builder: (context, state) => const HomeDetailsScreen(),
+        ),
+        GoRoute(
+          path: RoutesName.homeOffers,
+          builder: (context, state) => const HomeOffersScreen(),
         ),
         GoRoute(
           path: RoutesName.category,
           builder: (context, state) => const CategoryScreen(),
-          routes: [
-            GoRoute(
-              path: 'products',
-              builder: (context, state) => const CategoryProductsScreen(),
-            ),
-            GoRoute(
-              path: 'brands',
-              builder: (context, state) => const CategoryBrandsScreen(),
-            ),
-          ],
+        ),
+        GoRoute(
+          path: RoutesName.category,
+          builder: (context, state) => const CategoryProductsScreen(),
+        ),
+        GoRoute(
+          path: RoutesName.categoryBrands,
+          builder: (context, state) => const CategoryBrandsScreen(),
         ),
         GoRoute(
           path: RoutesName.cart,
           builder: (context, state) => const CartScreen(),
-          routes: [
-            GoRoute(
-              path: 'checkout',
-              builder: (context, state) => const CartCheckoutScreen(),
-            ),
-            GoRoute(
-              path: 'coupons',
-              builder: (context, state) => const CartCouponsScreen(),
-            ),
-          ],
+        ),
+        GoRoute(
+          path: RoutesName.cartCheckout,
+          builder: (context, state) => const CartCheckoutScreen(),
+        ),
+        GoRoute(
+          path: RoutesName.cartCoupons,
+          builder: (context, state) => const CartCouponsScreen(),
         ),
         GoRoute(
           path: RoutesName.profile,
           builder: (context, state) => const ProfileScreen(),
-          routes: [
-            GoRoute(
-              path: 'settings',
-              builder: (context, state) => const ProfileSettingsScreen(),
-            ),
-            GoRoute(
-              path: 'orders',
-              builder: (context, state) => const ProfileOrdersScreen(),
-            ),
-          ],
+        ),
+        GoRoute(
+          path: RoutesName.profileSettings,
+          builder: (context, state) => const ProfileSettingsScreen(),
+        ),
+        GoRoute(
+          path: RoutesName.profileOrders,
+          builder: (context, state) => const ProfileOrdersScreen(),
         ),
       ],
     ),
