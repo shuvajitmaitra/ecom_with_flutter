@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({
     super.key,
-    required this.activeTab,
-    required this.onTabSelected,
+    required this.activeIndex,
+    required this.onItemSelected,
   });
 
-  final AppTab activeTab;
-  final ValueChanged<AppTab> onTabSelected;
+  final int activeIndex;
+  final ValueChanged<int> onItemSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -69,13 +69,13 @@ class CustomTabBar extends StatelessWidget {
           children: items
               .map(
                 (item) => Expanded(
-                  child: _CustomTabBarButton(
-                    item: item,
-                    isSelected: activeTab == item.tab,
-                    onTap: () => onTabSelected(item.tab),
+                    child: _CustomTabBarButton(
+                      item: item,
+                      isSelected: activeIndex == item.tab.index,
+                      onTap: () => onItemSelected(item.tab.index),
+                    ),
                   ),
-                ),
-              )
+                )
               .toList(),
         ),
       ),

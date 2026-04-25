@@ -27,8 +27,8 @@ class HomeScreen extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.local_offer_outlined),
             title: const Text('My Order'),
-            subtitle: const Text('Open the offers route'),
-            onTap: () => context.push(RoutesName.profileOrders),
+            subtitle: const Text('Open the orders screen'),
+            onTap: () => context.go(RoutesName.profileOrders),
           ),
         ],
       ),

@@ -1,16 +1,16 @@
 class RoutesName {
   RoutesName._();
 
-  static const home = '/';
-  static const homeDetails = '/details';
-  static const homeOffers = '/offers';
+  static const home = '/home';
+  static const homeDetails = '/home/details';
+  static const homeOffers = '/home/offers';
   static const category = '/category';
-  static const categoryProducts = '/products';
-  static const categoryBrands = '/brands';
+  static const categoryProducts = '/category/products';
+  static const categoryBrands = '/category/brands';
   static const cart = '/cart';
-  static const cartCheckout = '/checkout';
-  static const cartCoupons = '/coupons';
+  static const cartCheckout = '/cart/checkout';
+  static const cartCoupons = '/cart/coupons';
   static const profile = '/profile';
-  static const profileSettings = '/settings';
-  static const profileOrders = '/orders';
+  static const profileSettings = '/profile/settings';
+  static const profileOrders = '/profile/orders';
 }
